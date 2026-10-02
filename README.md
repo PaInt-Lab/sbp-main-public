@@ -7,9 +7,6 @@
 | `sbp.py` | The SBP budgeting algorithm: mask allocation, gradient hooks, free-channel reinitialization. Backbone-agnostic. |
 | `run_cifar100_partial_dist.py` | Entry point — CIFAR-100. |
 | `run_mini_imagenet_partial_dist.py` | Entry point — miniImageNet. |
-| `run_multiseed_partial_dist.py` | Multi-seed driver; caches per-seed results and reports mean +/- std. |
-| `run_cifar100.py` | Shared components for CIFAR-100 (ResNet-18, Mahalanobis classifier, datasets, task schedule, imprinting, base-training loop, evaluation). Imported, not run directly. |
-| `run_mini_imagenet.py` | The same shared components for miniImageNet (84x84 inputs). Imported, not run directly. |
 
 ## Setup
 
