@@ -1,0 +1,5 @@
+# Tested with Python 3.13, CUDA 13.0, on a single NVIDIA GPU.
+# Any recent PyTorch 2.x with matching torchvision should work.
+torch>=2.1
+torchvision>=0.16
+numpy>=1.24
