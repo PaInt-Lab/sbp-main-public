@@ -42,28 +42,9 @@ To use an existing copy elsewhere, symlink `./data` to it, or pass
 Single seed:
 
 ```bash
-python run_cifar100_partial_dist.py --seed 1993
-python run_mini_imagenet_partial_dist.py --seed 1993
+python run_cifar100_partial_dist.py --seed 0
+python run_mini_imagenet_partial_dist.py --seed 0
 ```
-
-Five seeds (1993-1997) with aggregation:
-
-```bash
-python run_multiseed_partial_dist.py --dataset cifar100
-python run_multiseed_partial_dist.py --dataset miniimagenet
-```
-
-The driver writes each seed to `./results_partial_dist/<dataset>/seed<N>.json`
-and skips seeds already on disk, so it can be interrupted and resumed. Add
-`--aggregate-only` to re-print the summary without recomputing, `--seeds` to
-choose seeds, and set `SBP_RESULT_ROOT` to move the cache.
-
-Each run prints a per-session table (Overall / Base / New accuracy) followed by
-final accuracy, base-session accuracy, average-session accuracy, and
-forgetting.
-
-Approximate runtime on one modern GPU: 13 min/seed for CIFAR-100, 25 min/seed
-for miniImageNet.
 
 ## Options
 
